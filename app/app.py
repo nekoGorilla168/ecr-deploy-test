@@ -9,6 +9,8 @@ app = FastAPI()
 
 class HelloParam(BaseModel):
     name: str
+class SampleParam(BaseModel):
+    xxx: str
 
 
 @app.get("/hello")
