@@ -9,7 +9,7 @@ provider:
 
 functions:
   index:
-    image: 921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test
+    image: ${ssm.AccountId}.dkr.ecr.ap-northeast-1.amazonaws.com/${ssm.MangumRepository}
     events:
       - http:
           integration: lambda-proxy
