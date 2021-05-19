@@ -1,0 +1,18 @@
+service: ecr-test
+
+provider:
+  name: aws
+  stage: prod
+  region: ap-northeast-1
+  deploymentBucket: ecr-test-bucket
+  logRetentionInDays: 30
+
+functions:
+  index:
+    image: 921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test
+    events:
+      - http:
+          integration: lambda-proxy
+          proxy: /{proxy+}
+          method: ANY
+          cors: true

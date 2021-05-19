@@ -1,0 +1,24 @@
+ARG FUNCTION_DIR="/home/app/"
+ARG RUNTIME_VERSION="3.9"
+
+FROM python:${RUNTIME_VERSION}-buster as python-buster
+# gitのインストール
+RUN apt-get install -y git
+
+ADD https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie /usr/bin/aws-lambda-rie
+RUN chmod 755 /usr/bin/aws-lambda-rie
+
+WORKDIR ${FUNCTION_DIR}
+COPY . ${FUNCTION_DIR}
+
+RUN chmod 755 /entry.sh
+
+# runtime interface clientのインストール
+RUN pip install awslambdaric
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT [ "/bin/bash", "/entry.sh" ]
+CMD [ "app.handler" ]
+
+
