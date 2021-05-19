@@ -1,4 +1,4 @@
-name: Deploy Docker Image to AWS Lambda
+name: Deploy Docker Image to AWS ECR
 on:
   push:
     branches:
