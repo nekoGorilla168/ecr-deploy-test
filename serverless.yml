@@ -13,6 +13,6 @@ functions:
     events:
       - http:
           integration: lambda-proxy
-          proxy: /{proxy+}
+          path: /{proxy+}
           method: ANY
           cors: true
