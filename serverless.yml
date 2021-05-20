@@ -1,15 +1,19 @@
 service: ecr-test
-
+configValidationMode: off
 provider:
   name: aws
   stage: prod
   region: ap-northeast-1
-  deploymentBucket: ecr-test-bucket
   logRetentionInDays: 30
+  lambdaHashingVersion: 20201221
+  ecr:
+    images:
+      baseimage:
+        uri: ${ssm:AccountId}.dkr.ecr.ap-northeast-1.amazonaws.com/${ssm:MangumRepository}
 
 functions:
-  index:
-    image: ${ssm.AccountId}.dkr.ecr.ap-northeast-1.amazonaws.com/${ssm.MangumRepository}
+  helloFunction:
+    image: baseimage
     events:
       - http:
           integration: lambda-proxy

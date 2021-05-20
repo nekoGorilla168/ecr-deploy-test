@@ -17,7 +17,7 @@ RUN pip install awslambdaric
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "/bin/bash", "/entry.sh" ]
+ENTRYPOINT [ "/bin/bash", "entry.sh" ]
 CMD [ "app.handler" ]
 
 
