@@ -13,7 +13,7 @@
       "ecr": {
         "images": {
           "baseimage": {
-            "uri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:1221bdf4295a2c60bda5a88a3ffe8acdff3e601d1c467d25d1b3efc1b296fd56"
+            "uri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:2ad39d6478cfb924172e726ccfc96fd96c7d0ab26d34a8fba39c44b8df32c7db"
           }
         }
       },
@@ -180,7 +180,7 @@
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
-                "ImageUri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:1221bdf4295a2c60bda5a88a3ffe8acdff3e601d1c467d25d1b3efc1b296fd56"
+                "ImageUri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:2ad39d6478cfb924172e726ccfc96fd96c7d0ab26d34a8fba39c44b8df32c7db"
               },
               "PackageType": "Image",
               "FunctionName": "ecr-test-prod-helloFunction",
@@ -197,14 +197,14 @@
               "HelloFunctionLogGroup"
             ]
           },
-          "HelloFunctionLambdaVersionFw0p2IzDlTHPlVEdLVgpOStvoj2Uv8hvYz4X7NIQ": {
+          "HelloFunctionLambdaVersiongLGd3V2uC0aDUUNaYEHtPvGrZeSukp34lzBfT7AA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloFunctionLambdaFunction"
               },
-              "CodeSha256": "1221bdf4295a2c60bda5a88a3ffe8acdff3e601d1c467d25d1b3efc1b296fd56"
+              "CodeSha256": "2ad39d6478cfb924172e726ccfc96fd96c7d0ab26d34a8fba39c44b8df32c7db"
             }
           },
           "ApiGatewayRestApi": {
@@ -322,7 +322,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1621519292733": {
+          "ApiGatewayDeployment1621520746166": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -385,7 +385,7 @@
           "HelloFunctionLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloFunctionLambdaVersionFw0p2IzDlTHPlVEdLVgpOStvoj2Uv8hvYz4X7NIQ"
+              "Ref": "HelloFunctionLambdaVersiongLGd3V2uC0aDUUNaYEHtPvGrZeSukp34lzBfT7AA"
             },
             "Export": {
               "Name": "sls-ecr-test-prod-HelloFunctionLambdaFunctionQualifiedArn"
@@ -540,7 +540,7 @@
         "memory": 1024,
         "timeout": 6,
         "vpc": {},
-        "versionLogicalId": "HelloFunctionLambdaVersionFw0p2IzDlTHPlVEdLVgpOStvoj2Uv8hvYz4X7NIQ"
+        "versionLogicalId": "HelloFunctionLambdaVersiongLGd3V2uC0aDUUNaYEHtPvGrZeSukp34lzBfT7AA"
       }
     },
     "configValidationMode": "off",
@@ -561,7 +561,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/ecr-test/prod/1621519297979-2021-05-20T14:01:37.979Z",
+    "artifactDirectoryName": "serverless/ecr-test/prod/1621520751727-2021-05-20T14:25:51.727Z",
     "artifact": ""
   }
 }
