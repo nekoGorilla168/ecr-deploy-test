@@ -159,7 +159,7 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "ImageUri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:9cbc78f1e00922aab44fdf584e152d8dcf9e99345a571fc828e70c402fa92e03"
+          "ImageUri": "921441019197.dkr.ecr.ap-northeast-1.amazonaws.com/sample-test@sha256:1221bdf4295a2c60bda5a88a3ffe8acdff3e601d1c467d25d1b3efc1b296fd56"
         },
         "PackageType": "Image",
         "FunctionName": "ecr-test-prod-helloFunction",
@@ -176,14 +176,14 @@
         "HelloFunctionLogGroup"
       ]
     },
-    "HelloFunctionLambdaVersionzBxdwbPu8ed8OkfUVwqprS3e9aEOB63SqucmCl3Jao": {
+    "HelloFunctionLambdaVersionFw0p2IzDlTHPlVEdLVgpOStvoj2Uv8hvYz4X7NIQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloFunctionLambdaFunction"
         },
-        "CodeSha256": "9cbc78f1e00922aab44fdf584e152d8dcf9e99345a571fc828e70c402fa92e03"
+        "CodeSha256": "1221bdf4295a2c60bda5a88a3ffe8acdff3e601d1c467d25d1b3efc1b296fd56"
       }
     },
     "ApiGatewayRestApi": {
@@ -301,7 +301,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1621518011489": {
+    "ApiGatewayDeployment1621519292733": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -364,7 +364,7 @@
     "HelloFunctionLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloFunctionLambdaVersionzBxdwbPu8ed8OkfUVwqprS3e9aEOB63SqucmCl3Jao"
+        "Ref": "HelloFunctionLambdaVersionFw0p2IzDlTHPlVEdLVgpOStvoj2Uv8hvYz4X7NIQ"
       },
       "Export": {
         "Name": "sls-ecr-test-prod-HelloFunctionLambdaFunctionQualifiedArn"
