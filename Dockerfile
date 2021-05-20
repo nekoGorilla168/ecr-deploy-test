@@ -1,4 +1,4 @@
-ARG RUNTIME_VERSION="3.9"
+ARG RUNTIME_VERSION="3.8"
 
 FROM python:${RUNTIME_VERSION}-buster as python-buster
 # gitのインストール

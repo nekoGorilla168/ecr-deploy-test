@@ -322,7 +322,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1621510878047": {
+          "ApiGatewayDeployment1621518011489": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -561,7 +561,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/ecr-test/prod/1621510881139-2021-05-20T11:41:21.139Z",
+    "artifactDirectoryName": "serverless/ecr-test/prod/1621518017719-2021-05-20T13:40:17.719Z",
     "artifact": ""
   }
 }
