@@ -1,14 +1,14 @@
-from typing import get_args
 from fastapi import FastAPI
 from mangum import Mangum
 from pydantic import BaseModel
-from starlette.types import Message
 
 app = FastAPI()
 
 
 class HelloParam(BaseModel):
     name: str
+
+
 class SampleParam(BaseModel):
     xxx: str
 
